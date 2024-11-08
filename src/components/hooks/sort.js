@@ -9,11 +9,11 @@ export default function useSort(items, field) {
         return items.value
       }
       return items.value.slice().sort((u1, u2) => {
-        if (sorting.value === 'asc' && u1.fullName > u2[field]) {
+        if (sorting.value === 'asc' && u1[field] > u2[field]) {
           return 1
         } else if (sorting.value === 'asc') {
           return -1
-        } else if (sorting.value === 'desc' && u1.fullName > u2[field]) {
+        } else if (sorting.value === 'desc' && u1[field] > u2[field]) {
           return -1
         } else {
           return 1

@@ -29,10 +29,10 @@ const { users } = toRefs(props)
 
 defineEmits(['list-projects'])
 
-const availableUsers = computed(() => availableItems.value, 'fullName')
+const availableUsers = computed(() => availableItems.value)
 
 const { enteredSearchTerm, availableItems, updateSearch } = useSearch(users, 'fullName')
-const { sorting, sort, sortedItems } = useSort(availableUsers)
+const { sorting, sort, sortedItems } = useSort(availableUsers, 'fullName')
 
 const displayedUsers = computed(() => {
   return sortedItems.value
