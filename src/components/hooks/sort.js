@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
 
-export default function useSort(items) {
+export default function useSort(items, field) {
 
     const sorting = ref(null)
 
@@ -9,11 +9,11 @@ export default function useSort(items) {
         return items.value
       }
       return items.value.slice().sort((u1, u2) => {
-        if (sorting.value === 'asc' && u1.fullName > u2.fullName) {
+        if (sorting.value === 'asc' && u1.fullName > u2[field]) {
           return 1
         } else if (sorting.value === 'asc') {
           return -1
-        } else if (sorting.value === 'desc' && u1.fullName > u2.fullName) {
+        } else if (sorting.value === 'desc' && u1.fullName > u2[field]) {
           return -1
         } else {
           return 1
