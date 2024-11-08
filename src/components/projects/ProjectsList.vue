@@ -30,11 +30,11 @@ const { enteredSearchTerm, availableItems, updateSearch } = useSearch(projects, 
 const availableProjects = computed(() => availableItems.value)
 
 const hasProjects = computed(() => {
-  return props.user.projects && availableProjects.value.length > 0
+  return user.value.projects && availableProjects.value.length > 0
 })
 
 watch(user, () => {
-  enteredSearchTerm.value = ''
+  updateSearch('')
 })
 </script>
 
