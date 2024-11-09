@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
-import BaseSearch from './components/UI/BaseSearch.vue'
-import BaseContainer from './components/UI/BaseContainer.vue'
+import BaseSearch from './components/ui/BaseSearch.vue'
+import BaseContainer from './components/ui/BaseContainer.vue'
 import App from './App.vue'
 
 const app = createApp(App)

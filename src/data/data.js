@@ -1,7 +1,7 @@
 export default [
   {
     id: 'max',
-    fullName: 'Maximilian Schwarzmüller',
+    name: 'Maximilian Schwarzmüller',
     projects: [
       { id: 'max_p1', title: 'Record the Vue course' },
       { id: 'max_p2', title: 'Create more courses' },
@@ -10,7 +10,7 @@ export default [
   },
   {
     id: 'manu',
-    fullName: 'Manuel Lorenz',
+    name: 'Manuel Lorenz',
     projects: [
       { id: 'manu_p1', title: 'Create more courses' },
       { id: 'manu_p2', title: 'Dive into data science topics' },
@@ -19,7 +19,7 @@ export default [
   },
   {
     id: 'julie',
-    fullName: 'Julie Jones',
+    name: 'Julie Jones',
     projects: [
       { id: 'julie_p1', title: 'Create agenda for next months' },
       { id: 'julie_p2', title: 'Explore new topics' }
@@ -27,7 +27,7 @@ export default [
   },
   {
     id: 'michael',
-    fullName: 'Michael Miller',
+    name: 'Michael Miller',
     projects: []
   }
 ]

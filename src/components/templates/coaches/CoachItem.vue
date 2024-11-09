@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h3>{{ userName }}</h3>
+    <h3>{{ name }}</h3>
     <button @click="$emit('list-projects', id)">View Projects</button>
   </li>
 </template>
@@ -8,9 +8,8 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue'
 
-defineProps(['id', 'userName'])
+defineProps(['id', 'name'])
 defineEmits(['list-projects'])
-
 </script>
 
 <style scoped>

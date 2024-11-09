@@ -1,23 +1,26 @@
 <template>
   <main>
-    <user-list :users="activeUsers" @list-projects="selectUser"></user-list>
-    <projects-list :user="selectedUser"></projects-list>
+    <coaches-list-view
+      :coaches="activeCoaches"
+      @list-projects="selectCoach"
+    ></coaches-list-view>
+    <projects-list-view :coach="selectedCoach"></projects-list-view>
   </main>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-import USER_DATA from './dummy-data.js'
+import DATA from './data/data.js'
 
-import UserList from './components/users/UserList.vue'
-import ProjectsList from './components/projects/ProjectsList.vue'
+import CoachesListView from './pages/CoachesListView.vue'
+import ProjectsListView from './pages/ProjectsListView.vue'
 
-const selectedUser = ref(null)
-const activeUsers = USER_DATA
+const selectedCoach = ref(null)
+const activeCoaches = DATA
 
-const selectUser = (uid) => {
-  selectedUser.value = activeUsers.find((usr) => usr.id === uid)
+const selectCoach = (id) => {
+  selectedCoach.value = activeCoaches.find((coach) => coach.id === id)
 }
 </script>
 

@@ -4,14 +4,15 @@
       type="search"
       @input="(event) => $emit('search', event.target.value)"
       :value="searchTerm"
-      placeholder="Filter items" />
+      :placeholder="placeholder"
+    />
   </form>
 </template>
 
 <script setup>
 import { defineProps, defineEmits } from 'vue'
 
-defineProps(['searchTerm'])
+defineProps(['searchTerm', 'placeholder'])
 defineEmits(['search'])
 </script>
 

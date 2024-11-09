@@ -7,7 +7,9 @@ export default function useSearch(items, searchParam) {
   const availableItems = computed(() => {
     if (activeSearchTerm.value) {
       return items.value.filter((item) =>
-        item[searchParam].toLowerCase().includes(activeSearchTerm.value.toLowerCase())
+        item[searchParam]
+          .toLowerCase()
+          .includes(activeSearchTerm.value.toLowerCase())
       )
     }
     return items.value
